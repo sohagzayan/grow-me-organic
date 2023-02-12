@@ -24,18 +24,20 @@ const Header = () => {
           >
             GrowMeOrganic
           </Typography>
-          <Button
-            onClick={handleLogout}
-            color="inherit"
-            sx={{
-              color: "#020202",
-              fontFamily: "Poppins",
-              textTransform: "capitalize",
-              fontSize: "20px",
-            }}
-          >
-            LogOut
-          </Button>
+          {localStorage.getItem("info") && (
+            <Button
+              onClick={handleLogout}
+              color="inherit"
+              sx={{
+                color: "#020202",
+                fontFamily: "Poppins",
+                textTransform: "capitalize",
+                fontSize: "20px",
+              }}
+            >
+              LogOut
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </Box>
